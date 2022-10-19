@@ -1,0 +1,5 @@
+Install Node while inside the container and run the index file with node /usr/src/app/index.js in the container.
+apt-get -y install curl
+curl -sL https://deb.nodesource.com/setup_16.x | bash
+apt install -y nodejs
+node /usr/src/app/index.js
