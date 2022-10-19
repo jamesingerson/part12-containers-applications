@@ -1,0 +1,11 @@
+Step 1. Run an Ubuntu container with the command given by hello-world
+docker container run -it ubuntu bash
+
+Step 2. Create directory /usr/src/app
+mkdir /usr/src/app
+
+Step 3. Create a file /usr/src/app/index.js
+touch /usr/src/app/index.js
+
+Step 4. Run exit to quit from the container
+exit
