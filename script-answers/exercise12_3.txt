@@ -1,0 +1,3 @@
+Edit the /usr/src/app/index.js file inside the container with the now installed Nano and add the following line console.log('Hello World')
+nano /usr/src/app/index.js
+console.log('Hello World') ctrl+x y enter
