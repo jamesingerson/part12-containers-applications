@@ -1,0 +1,22 @@
+Step 1: Run MongoDB
+docker-compose -f docker-compose.dev.yml down
+docker-compose -f docker-compose.dev.yml up
+
+Step 2: Use docker exec to get inside the container
+docker container ls
+docker exec -it todo-backend-mongo-1 bash
+
+Step 3: Open Mongo cli
+mongosh -u root -p example
+
+show dbs
+use_thedatabase
+show collections
+db.todos.find({})
+
+db.todos.insertOne({ text:"Increase the number of tools in my toolbelt", done: false })
+
+db.todos.find({})
+
+exit
+exit
