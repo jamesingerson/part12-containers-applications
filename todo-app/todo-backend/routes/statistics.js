@@ -7,7 +7,7 @@ const redis = require("../redis");
 statisticsRouter.get("/", async (req, res) => {
   const added_todos = await redis.getAsync("added_todos");
   res.send({
-    added_todos: added_todos ? added_todos : 0,
+    added_todos: added_todos ? added_todos : "0",
   });
 });
 
