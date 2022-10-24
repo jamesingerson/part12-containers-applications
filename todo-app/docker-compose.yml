@@ -12,7 +12,7 @@ services:
     image: todo-backend
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: ./todo-backend/Dockerfile
     volumes:
       - ./todo-backend/:/usr/src/todo-backend
     ports:
