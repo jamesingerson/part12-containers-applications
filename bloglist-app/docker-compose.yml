@@ -2,23 +2,23 @@ services:
   front:
     image: bloglist-front
     build:
-      context: .
-      dockerfile: ./bloglist-frontend/Dockerfile
+      context: ./bloglist-frontend
+      dockerfile: Dockerfile
     volumes:
-      - ./bloglist-frontend/:/usr/src/bloglist-front
+      - ./:/usr/src/bloglist-frontend
     ports:
       - 3000:80
-    container_name: bloglist-front
+    container_name: bloglist-frontend
   server:
     image: bloglist-back
     build:
-      context: .
-      dockerfile: ./bloglist-backend/Dockerfile
+      context: ./bloglist-backend
+      dockerfile: Dockerfile
     volumes:
-      - ./bloglist-backend/:/usr/src/bloglist-back
+      - ./:/usr/src/bloglist-backend
     ports:
       - 3003:3003
-    container_name: bloglist-back
+    container_name: bloglist-backend
   nginx:
     image: nginx:1.20.1
     volumes:
