@@ -4,7 +4,7 @@
   "description": "Back end for the Full Stack Open Blog List application",
   "main": "index.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=production node index.js",
+    "start": "PORT=3003 NODE_ENV=production node index.js",
     "dev": "PORT=3003 nodemon ./bin/www",
     "test": "cross-env NODE_ENV=test jest --verbose --runInBand --forceExit",
     "build:ui": "rm -rf build && cd ../notes/ && npm run build && cp -r build ../notes-backend",

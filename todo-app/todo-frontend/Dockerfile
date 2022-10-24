@@ -18,8 +18,6 @@ WORKDIR /usr/src/app
 
 COPY --from=build-stage /usr/src/app /usr/src/app
 
-RUN ls -la
-
 RUN CI=true npm test
 
 # serve

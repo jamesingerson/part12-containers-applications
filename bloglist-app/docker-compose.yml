@@ -1,0 +1,31 @@
+services:
+  front:
+    image: bloglist-front
+    build:
+      context: .
+      dockerfile: ./bloglist-frontend/Dockerfile
+    volumes:
+      - ./bloglist-frontend/:/usr/src/bloglist-front
+    ports:
+      - 3000:80
+    container_name: bloglist-front
+  server:
+    image: bloglist-back
+    build:
+      context: .
+      dockerfile: ./bloglist-backend/Dockerfile
+    volumes:
+      - ./bloglist-backend/:/usr/src/bloglist-back
+    ports:
+      - 3003:3003
+    container_name: bloglist-back
+  nginx:
+    image: nginx:1.20.1
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    ports:
+      - 8080:80
+    container_name: bloglist-reverse-proxy
+    depends_on:
+      - front
+      - server

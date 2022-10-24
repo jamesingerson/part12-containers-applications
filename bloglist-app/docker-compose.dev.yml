@@ -12,7 +12,7 @@ services:
     image: bloglist-back-dev
     build:
       context: .
-      dockerfile: dev.Dockerfile
+      dockerfile: ./bloglist-backend/dev.Dockerfile
     volumes:
       - ./bloglist-backend/:/usr/src/bloglist-back-dev
     ports:
